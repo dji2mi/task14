@@ -3,13 +3,19 @@
 const path = require('path');
 const yargs = require('yargs').argv;
 const reporter = require('cucumber-html-reporter');
- 
+const cucumberJunitConvert = require('cucumber-junit-convert');
+
 const reporterOptions = {
         theme: 'bootstrap',
         jsonFile: path.join(__dirname, '../../../reports/report.json'),
         output: path.join(__dirname, '../../../reports/cucumber_report.html'),
         reportSuiteAsScenarios: true,
         launchReport: true
+    };
+
+const options = {
+        inputJsonFile: './reports/report.json',
+        outputXmlFile: './reports/report.xml'
     };
 
 exports.config = {
@@ -39,6 +45,7 @@ exports.config = {
         return browser.manage().window().setSize(1000, 800);
     },
     afterLaunch: () => {
-        return reporter.generate(reporterOptions);
+        reporter.generate(reporterOptions);
+        cucumberJunitConvert.convert(options);
     }
 };

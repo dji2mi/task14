@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Access to other sites" time="10.776" tests="4" failures="0" errors="0" skipped="0">
+    <testcase name="I should be able too access UPS Selector" classname="access-to-other-sites;i-should-be-able-too-access-ups-selector" time="4.183"/>
+    <testcase name="I should be able to access Trade-UPS" classname="access-to-other-sites;i-should-be-able-to-access-trade-ups" time="1.632"/>
+    <testcase name="I should be able to access &quot;Product registration&quot;" classname="access-to-other-sites;i-should-be-able-to-access-&quot;product-registration&quot;" time="1.454"/>
+    <testcase name="I should be able to access &quot;APC Surge Protection Selector - Compare our Surge Protectors&quot;" classname="access-to-other-sites;i-should-be-able-to-access-&quot;apc-surge-protection-selector---compare-our-surge-protectors&quot;" time="3.507"/>
+  </testsuite>
+</testsuites>
